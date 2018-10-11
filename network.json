@@ -116,12 +116,6 @@
             "task_status": "in progress"
         },
         {
-            "assigned_to": "dasheth",
-            "desc": "",
-            "name": "mergeArrests.R",
-            "task_status": "in progress"
-        },
-        {
             "name": "g.png"
         },
         {
@@ -144,8 +138,14 @@
         },
         {
             "name": "d.png"
+        },
+        {
+            "assigned_to": "dasheth",
+            "desc": "",
+            "name": "mergeArrests.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-11 21:36:25",
+    "updated_at": "2018-10-11 21:38:31",
     "url": "https://github.com/fall2018-wallace/h6"
 }
