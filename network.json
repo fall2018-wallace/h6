@@ -54,6 +54,16 @@
             ],
             "source": "mergeArrests.R",
             "target": "a.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "c1",
+                    "type": "png"
+                }
+            ],
+            "source": "mergeArrests.R",
+            "target": "c1.png"
         }
     ],
     "nodes": [
@@ -96,6 +106,6 @@
             "name": "d.png"
         }
     ],
-    "updated_at": "2018-10-11 21:35:38",
+    "updated_at": "2018-10-11 21:35:47",
     "url": "https://github.com/fall2018-wallace/h6"
 }
