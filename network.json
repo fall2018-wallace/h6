@@ -13,16 +13,6 @@
             ],
             "source": "scprc_est_2017_18_pop_res.csv",
             "target": "clean.R"
-        },
-        {
-            "ports": [
-                {
-                    "output": "clean_data",
-                    "type": "csv"
-                }
-            ],
-            "source": "clean.R",
-            "target": "data.csv"
         }
     ],
     "nodes": [
@@ -30,12 +20,11 @@
             "name": "scprc_est_2017_18_pop_res.csv"
         },
         {
-            "name": "clean.R"
-        },
-        {
-            "name": "data.csv"
+            "assigned_to": "dasheth",
+            "name": "clean.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-11 19:02:01",
+    "updated_at": "2018-10-11 19:04:00",
     "url": "https://github.com/fall2018-wallace/h6"
 }
