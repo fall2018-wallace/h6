@@ -26,3 +26,4 @@ readStates <- function(states)
 cleanCensus<-readStates(raw_data)
 str(cleanCensus)
 c<- cleanCensus
+c{9}
