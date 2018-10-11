@@ -64,16 +64,16 @@ c <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #Creating a sim
 c 
 
 #Q9
-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #rotating text and adding lable using theme and labs function.
+x<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #rotating text and adding lable using theme and labs function.
 
 #Q10
 df$stateName <- factor(df$stateName, levels = df$stateName[order(df$Murder)]) #Giving levels to stateName by ordering itself by Murder rate.
-c <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #ggplot sorts the x axis by itself by recognizing the levels from x attribute which is stateName
-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
+y <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #ggplot sorts the x axis by itself by recognizing the levels from x attribute which is stateName
+z<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
 
 #Q11
-c <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col(color=df$percentOver18) + theme_classic() #etting color of the barchart by using percentOver18 as levels
-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
+w <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col(color=df$percentOver18) + theme_classic() #etting color of the barchart by using percentOver18 as levels
+s<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
 
 #Q12
 #generating a barchart by using geom_point function, color and size is set to levels by Murder rate, legend is disabled.
