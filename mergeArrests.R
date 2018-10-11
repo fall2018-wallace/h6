@@ -1,5 +1,6 @@
 
  localUSArrests<-USArrests
+ localUSArrests
 arrests
 df
 row.names(localUSArrests)     #Checking if the row names are stateNames, which they are not. 
