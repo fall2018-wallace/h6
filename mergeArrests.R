@@ -5,14 +5,14 @@
 df
 row.names(localUSArrests)     #Checking if the row names are stateNames, which they are not. 
 #We will have to create a column with these names so that we have a common column to merge the dataframes by.
-View(localUSArrests)
+
 colnames(dfstates)            #Checking if dfstates has statenames as a column. It does.
 localUSArrests$stateName <- dfstates$stateName   #making the required column.
-View(localUSArrests)       #checking if rownames match the stateName for consistency
+#View(localUSArrests)       #checking if rownames match the stateName for consistency
 
 df <- merge(dfstates, localUSArrests, by = "stateName")   #merging by the common column stateName
 df                        
-View(df)         #viewing the column for proper merging
+#View(df)         #viewing the column for proper merging
 
 #Step B
 
@@ -53,7 +53,7 @@ b
 #Murder rate is per 1,00,000. 
 #So we multiply with actual population and divide by 1,00,000 to get the number of murders
 df$MurderNumber <- df$Murder*df$population/100000  
-View(df)
+#View(df)
 summary(df$MurderNumber)
 df[,c("MurderNumber","stateName")] #Outputting number of murders with state names for reference
 
