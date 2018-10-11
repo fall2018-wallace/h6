@@ -17,7 +17,7 @@
         {
             "ports": [
                 {
-                    "input": "d",
+                    "input": "df",
                     "output": "c",
                     "type": "r_obj"
                 }
@@ -42,6 +42,6 @@
             "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-11 19:32:24",
+    "updated_at": "2018-10-11 19:34:15",
     "url": "https://github.com/fall2018-wallace/h6"
 }
