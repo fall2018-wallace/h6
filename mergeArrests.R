@@ -1,6 +1,6 @@
 
-c
-row.names(states)     #Checking if the row names are stateNames, which they are not. 
+cleanCensus
+row.names(localUSArrests)     #Checking if the row names are stateNames, which they are not. 
 #We will have to create a column with these names so that we have a common column to merge the dataframes by.
 View(localUSArrests)
 colnames(dfstates)            #Checking if dfstates has statenames as a column. It does.
