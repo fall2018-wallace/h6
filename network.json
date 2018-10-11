@@ -36,10 +36,12 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "dasheth",
             "desc": "",
-            "name": "mergeArrests.R"
+            "name": "mergeArrests.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-11 19:18:37",
+    "updated_at": "2018-10-11 19:21:19",
     "url": "https://github.com/fall2018-wallace/h6"
 }
