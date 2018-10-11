@@ -1,5 +1,5 @@
 
-cleanCensus
+c<-cleanCensus
 row.names(localUSArrests)     #Checking if the row names are stateNames, which they are not. 
 #We will have to create a column with these names so that we have a common column to merge the dataframes by.
 View(localUSArrests)
