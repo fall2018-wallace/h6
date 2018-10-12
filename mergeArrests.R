@@ -78,8 +78,11 @@ w2
 
 
 #Q11
-w <- ggplot(data=df, aes(x reorder(= stateName,y= MurderNumber))) + geom_col(color=df$percentOver18) + theme_classic()
-s<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
+w3<-ggplot(data=DataSetMerged, aes(x=reorder(stateName,MurderperState), y=MurderperState, fill=percentOver18)) + geom_col()
+w3<-w3+geom_line()
+w3<-w3+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total Murders")
+w3
+
 
 #Q12
 #generating a barchart by using geom_point function, color and size is set to levels by Murder rate, legend is disabled.
