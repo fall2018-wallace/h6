@@ -1,19 +1,15 @@
 
 library("ggplot2")
- localUSArrests<-USArrests
- localUSArrests
-
+localUSArrests<-USArrests
+localUSArrests
 df
 df<-df[-9,]
-row.names(localUSArrests)     #Checking if the row names are stateNames, which they are not. 
-#We will have to create a column with these names so that we have a common column to merge the dataframes by.
-
-colnames(df)            #Checking if dfstates has statenames as a column. It does.
-localUSArrests$stateName <- df$stateName   #making the required column.
-#View(localUSArrests)       #checking if rownames match the stateName for consistency
-
+row.names(localUSArrests)
+colnames(df)
+localUSArrests$stateName <- df$stateName  
 df <- merge(df, localUSArrests, by = "stateName")   #merging by the common column stateName
 df                        
+
 #Q4
 summary(df$population)
 sd(df$population)
