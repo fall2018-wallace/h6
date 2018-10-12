@@ -69,7 +69,6 @@ w<-ggplot(data=df, aes(stateName,MurderNumber)) + geom_col()
 w1<-w+geom_line()
 w1<-w1+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total Murders")
 w1
-#x<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #rotating text and adding lable using theme and labs function.
 
 #Q10
 df$stateName <- factor(df$stateName, levels = df$stateName[order(df$Murder)]) #Giving levels to stateName by ordering itself by Murder rate.
