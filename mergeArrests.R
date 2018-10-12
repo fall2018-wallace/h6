@@ -64,7 +64,8 @@ c <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #Creating a sim
 c 
 
 #Q9
-x<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #rotating text and adding lable using theme and labs function.
+w <- ggplot(data=df, aes(stateName,MurderNumber)
+#x<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #rotating text and adding lable using theme and labs function.
 
 #Q10
 df$stateName <- factor(df$stateName, levels = df$stateName[order(df$Murder)]) #Giving levels to stateName by ordering itself by Murder rate.
