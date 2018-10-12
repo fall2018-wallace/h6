@@ -71,7 +71,7 @@ w1<-w1+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total M
 w1
 
 #Q10
-w2<-ggplot(data=df, aes(x=reorder(stateName,MurderNumber), y=MurderNu)) + geom_col()
+w2<-ggplot(data=df, aes(x=reorder(stateName,MurderNumber), y=MurderNumber)) + geom_col()
 w2<-w2+geom_line()
 w2<-w2+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total Murders")
 w2
