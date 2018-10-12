@@ -88,5 +88,5 @@ w3
 #generating a barchart by using geom_point function, color and size is set to levels by Murder rate, legend is disabled.
 #added alpha transparency to see the overlaps between points.
 #labels are added for better understanding and theme is set to minimal to emphasize the overlap between colors using alpha.
-d <- ggplot(df, aes(x= population, y=percentOver18)) + geom_point(color=df$Murder, size=df$Murder, show.legend = FALSE, alpha=0.8) + labs(x='Population percentage over 18', y='Percentage') 
+d <- ggplot(df, aes(x= population, y=percentOver18)) + geom_point(color=df$Murder, size=df$Murder) + labs(x='Population percentage over 18', y='Percentage') 
 d
