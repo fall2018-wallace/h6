@@ -70,10 +70,13 @@ w1<-w+geom_line()
 w1<-w1+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total Murders")
 w1
 
-#Q10
-df$stateName <- factor(df$stateName, levels = df$stateName[order(df$Murder)]) #Giving levels to stateName by ordering itself by Murder rate.
-y <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #ggplot sorts the x axis by itself by recognizing the levels from x attribute which is stateName
-z<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
+#Q10w2<-ggplot(data=DataSetMerged, aes(x=reorder(stateName,MurderperState), y=MurderperState)) + geom_col()
+w2<-w2+geom_line()
+w2<-w2+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total Murders")
+w2
+#df$stateName <- factor(df$stateName, levels = df$stateName[order(df$Murder)]) #Giving levels to stateName by ordering itself by Murder rate.
+#y <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #ggplot sorts the x axis by itself by recognizing the levels from x attribute which is stateName
+#z<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
 
 #Q11
 w <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col(color=df$percentOver18) + theme_classic() #etting color of the barchart by using percentOver18 as levels
