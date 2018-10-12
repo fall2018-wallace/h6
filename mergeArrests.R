@@ -78,7 +78,7 @@ w2
 
 
 #Q11
-w <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col(color=df$percentOver18) + theme_classic() #etting color of the barchart by using percentOver18 as levels
+w <- ggplot(data=df, aes(x reorder(= stateName,y= MurderNumber))) + geom_col(color=df$percentOver18) + theme_classic()
 s<-c + theme(axis.text.x = element_text(angle = 90, hjust = 1)) + labs(x='Total Murders', y='Number Of Murders') #output
 
 #Q12
