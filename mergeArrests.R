@@ -27,13 +27,7 @@ b
 
 #Q6
 #I find boxplot more useful because the detailed distribution range-wise and other summary can also be 
-#Boxplot as a whole seems more useful to me since you can understand the distribution in a more details manner as you get an idea of median, outliers
-#and majority of the distribution being focused in a certain range.
-#histogram only provides bins according to a set of values which might tell us how many states may exist in what range but you can not get a clear
-#idea of which state(s) lie at the median point. 
-#in boxplot outliers will tell you the extremeties of the values in this case and as we can see 4 states have much more population than other states.
-#We can also tell that there is precisely one state which reaches close to 40 million population.
-# we can also tell that the majority of the states lie in between 3 million and 7 million
+#inferred.
 
 #Q7
 df$MurderNumber <- df$Murder*df$population/100000  
