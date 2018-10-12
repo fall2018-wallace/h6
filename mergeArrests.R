@@ -14,30 +14,18 @@ localUSArrests$stateName <- df$stateName   #making the required column.
 
 df <- merge(df, localUSArrests, by = "stateName")   #merging by the common column stateName
 df                        
-#View(df)         #viewing the column for proper merging
-
-#Step B
-
 #Q4
-summary(df$population) #finding out minimum and maximum to decide binwidth.
-#best way to define binwidth would be to use product of standard deviation and inverse of cube root of number of observations.
-# which would be (0.2714 * 7345270)/35.35 which comes out to be 56393. however the histogram appears too crowded with lines and is hard to work with.
-#so approx binwidth for population i am determining by (max-min)/(square root of number of observations) which comes out to be 1102046
+summary(df$population)
 sd(df$population)
 g <- ggplot(df, aes(x=population)) + geom_histogram(binwidth = 1102046, bins=30, fill='white', color='steelBlue') + theme_classic()  #Set the binwidth to minimum value.
 g
-summary(df$Murder) #finding out minimum and maximum to decide binwidth.
-#binwidth here becomes 0.4695 for murder.
+summary(df$Murder)
 f <- ggplot(df, aes(x=Murder)) + geom_histogram(binwidth=0.4695 ,bins=30, fill='white', color='red') + theme_classic() #Set the binwidth to minimum value.
 f
 
 #Q5
-#Creating boxplot of population with outliers set to be shown as red and with a viewable size. Adding notch to see the distribution across
-#overlapping median line
-#barplot for population
 a <- ggplot(df, aes(x="", y = population)) + geom_boxplot(outlier.color='red', outlier.size=2, outlier.shape=16, notch=TRUE, color='steelBlue', fill='gray') + theme_classic() 
 a
-#barplot for Murder
 b <- ggplot(df, aes(x="", y = Murder)) + geom_boxplot(outlier.color='red', outlier.size=2, outlier.shape=16, notch=TRUE, color='red', fill='gray') + theme_classic() + labs(y='Murder rate')
 b
 
@@ -51,11 +39,7 @@ b
 # we can also tell that the majority of the states lie in between 3 million and 7 million
 
 #Q7
-
-#Murder rate is per 1,00,000. 
-#So we multiply with actual population and divide by 1,00,000 to get the number of murders
 df$MurderNumber <- df$Murder*df$population/100000  
-#View(df)
 summary(df$MurderNumber)
 df[,c("MurderNumber","stateName")] #Outputting number of murders with state names for reference
 
@@ -64,7 +48,6 @@ c <- ggplot(df, aes(x = stateName,y= MurderNumber)) + geom_col() #Creating a sim
 c 
 
 #Q9
-# Rotated text (on the X axis), so we can see x labels, also added a title named “Total Murders”.
 w<-ggplot(data=df, aes(stateName,MurderNumber)) + geom_col()
 w1<-w+geom_line()
 w1<-w1+theme(axis.text.x = element_text(angle = 90, hjust = 1))+ggtitle("Total Murders")
