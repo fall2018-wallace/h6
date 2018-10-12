@@ -26,6 +26,7 @@ b <- ggplot(df, aes(x="", y = Murder)) + geom_boxplot(outlier.color='red', outli
 b
 
 #Q6
+#I find boxplot more useful because the detailed distribution range-wise and other summary can also be 
 #Boxplot as a whole seems more useful to me since you can understand the distribution in a more details manner as you get an idea of median, outliers
 #and majority of the distribution being focused in a certain range.
 #histogram only provides bins according to a set of values which might tell us how many states may exist in what range but you can not get a clear
